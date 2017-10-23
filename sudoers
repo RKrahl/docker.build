@@ -1,0 +1,18 @@
+
+##
+# Override built-in defaults
+##
+Defaults always_set_home
+Defaults secure_path="/usr/sbin:/usr/bin:/sbin:/bin"
+Defaults env_reset
+
+##
+# User specification
+##
+
+# root and users in group wheel can run anything on any machine as any user
+root		ALL = (ALL) ALL
+%wheel		ALL = (ALL) ALL
+
+# abuild is allowed to install additional packages
+abuild		ALL = NOPASSWD: /usr/bin/zypper
