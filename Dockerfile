@@ -1,4 +1,4 @@
-FROM rkrahl/opensuse:42.3
+FROM rkrahl/opensuse:42.1
 
 ENV RPM_TOPDIR /usr/src/packages
 
