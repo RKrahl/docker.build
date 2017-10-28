@@ -16,7 +16,8 @@ COPY sudoers /etc/sudoers
 
 # Enable install locally build RPMs from zypper.
 RUN zypper --non-interactive addrepo /usr/src/packages/RPMS/ local && \
-    zypper --non-interactive modifyrepo --priority 150 --no-gpgcheck local
+    zypper --non-interactive modifyrepo \
+	   --refresh --priority 150 --no-gpgcheck local
 
 USER abuild
 WORKDIR $RPM_TOPDIR
