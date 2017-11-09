@@ -7,6 +7,11 @@ Defaults secure_path="/usr/sbin:/usr/bin:/sbin:/bin"
 Defaults env_reset
 
 ##
+# Cmnd alias specification
+##
+Cmnd_Alias	PKGS = /usr/bin/zypper, /bin/rpm
+
+##
 # User specification
 ##
 
@@ -15,4 +20,4 @@ root		ALL = (ALL) ALL
 %wheel		ALL = (ALL) ALL
 
 # abuild is allowed to install additional packages
-abuild		ALL = NOPASSWD: /usr/bin/zypper
+abuild		ALL = NOPASSWD: PKGS
