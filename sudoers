@@ -5,6 +5,7 @@
 Defaults always_set_home
 Defaults secure_path="/usr/sbin:/usr/bin:/sbin:/bin"
 Defaults env_reset
+Defaults env_keep += "http_proxy https_proxy no_proxy"
 
 ##
 # Cmnd alias specification
