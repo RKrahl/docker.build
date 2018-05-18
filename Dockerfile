@@ -1,4 +1,4 @@
-FROM rkrahl/opensuse:42.3
+FROM rkrahl/opensuse:15.0
 
 ENV RPM_TOPDIR /usr/src/packages
 
@@ -13,7 +13,6 @@ RUN groupadd abuild && \
     chmod -R g+w $RPM_TOPDIR
 
 COPY sudoers /etc/sudoers
-COPY limits.conf /etc/security/limits.conf
 
 # Enable install locally build RPMs from zypper.
 RUN zypper --non-interactive addrepo /usr/src/packages/RPMS/ local && \

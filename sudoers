@@ -10,7 +10,7 @@ Defaults env_keep += "http_proxy https_proxy no_proxy"
 ##
 # Cmnd alias specification
 ##
-Cmnd_Alias	PKGS = /usr/bin/zypper, /bin/rpm
+Cmnd_Alias	PKGS = /usr/bin/zypper, /usr/bin/rpm
 
 ##
 # User specification
