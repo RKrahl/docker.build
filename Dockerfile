@@ -14,7 +14,8 @@ RUN mkdir -p \
 	$RPM_TOPDIR/SOURCES \
 	$RPM_TOPDIR/SPECS \
 	$RPM_TOPDIR/SRPMS && \
-    echo "%_topdir $RPM_TOPDIR" > /etc/rpm/macros.local && \
+    echo -e "%_topdir $RPM_TOPDIR\n%centos_version 700" \
+	> /etc/rpm/macros.local && \
     groupadd abuild && \
     useradd -g abuild -c "Build user" -d $RPM_TOPDIR abuild && \
     chgrp -R abuild $RPM_TOPDIR && \
