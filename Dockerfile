@@ -1,4 +1,4 @@
-FROM rkrahl/opensuse:15.2
+FROM rkrahl/opensuse:15.3
 
 ENV RPM_TOPDIR /usr/src/packages
 
