@@ -1,11 +1,14 @@
 FROM rkrahl/opensuse:15.4
 
-ENV RPM_TOPDIR /usr/src/packages
+RUN zypper --non-interactive refresh
 
 RUN zypper --non-interactive install \
 	build \
+	python-rpm-macros \
 	rpm-build \
 	sudo
+
+ENV RPM_TOPDIR /usr/src/packages
 
 RUN groupadd abuild && \
     useradd -g abuild -c "Build user" -d $RPM_TOPDIR abuild && \
