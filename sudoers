@@ -1,6 +1,6 @@
 
 ##
-# Override built-in defaults
+## Defaults specification
 ##
 Defaults always_set_home
 Defaults secure_path="/usr/sbin:/usr/bin:/sbin:/bin"
@@ -8,17 +8,17 @@ Defaults env_reset
 Defaults env_keep += "http_proxy https_proxy no_proxy"
 
 ##
-# Cmnd alias specification
+## Cmnd alias specification
 ##
 Cmnd_Alias	PKGS = /usr/bin/zypper, /usr/bin/rpm
 
 ##
-# User specification
+## User privilege specification
 ##
 
 # root and users in group wheel can run anything on any machine as any user
-root		ALL = (ALL) ALL
-%wheel		ALL = (ALL) ALL
+root		ALL = (ALL:ALL) ALL
+%wheel		ALL = (ALL:ALL) ALL
 
 # abuild is allowed to install additional packages
-abuild		ALL = NOPASSWD: PKGS
+abuild		ALL = (ALL:ALL) NOPASSWD: PKGS
