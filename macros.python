@@ -1,1 +1,1 @@
-%python_module() python311-%{**}
+%python_module() python3-%{**} python311-%{**}

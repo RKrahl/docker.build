@@ -2,9 +2,12 @@ FROM rkrahl/opensuse:15.5
 
 RUN zypper --non-interactive refresh
 
+RUN zypper --non-interactive removelock python3-base
+
 RUN zypper --non-interactive install \
 	build \
 	python-rpm-macros \
+	python3-base \
 	rpm-build \
 	sudo
 
