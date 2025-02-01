@@ -1,1 +1,2 @@
 %python_module() python3-%{**} python311-%{**}
+%sle15_python_module_pythons %define pythons python3 python311
